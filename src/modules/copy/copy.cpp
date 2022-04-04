@@ -364,7 +364,7 @@ enum IPtype getIPv_type(char *text) {
     int lbkt=0, rbkt=0, per=0;
 	int i=0;
 
-	while (isspace(text[start])) //skip any initial whitespaces at the beginning
+    while (isspace(text[start])) //skip any initial whitespaces at the beginning
         start++;
 
     for (i=start; ;i++) {
@@ -382,7 +382,7 @@ enum IPtype getIPv_type(char *text) {
        Test for IPv4 or IPv6 address. IPv6 type contains square brackets. IPv4 contains 3 periods. 
 	   Note that IPv4-mapped IPv6 addresses are of the format [::ffff.<IPv4 address>] 
     */
-	if (lbkt && rbkt)
+    if (lbkt && rbkt)
         type = IPv6;
     else if (per == 3)
         type = IPv4;
