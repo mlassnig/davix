@@ -374,8 +374,8 @@ enum IPtype getIPv_type(char *text) {
             lbkt++;
         else if (text[i] == ']')
             rbkt++;
-		else if (text[i] == '.')
-			per++;
+        else if (text[i] == '.')
+            per++;
     }
 
     /* 
