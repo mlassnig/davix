@@ -367,7 +367,7 @@ enum IPtype getIPv_type(char *text) {
     while (isspace(text[start])) //skip any initial whitespaces at the beginning
         start++;
 
-    for (i=start; ;i++) {
+    for (i=start;;i++) {
         if (isspace(text[i]))
             break;
         else if (text[i] == '[')
